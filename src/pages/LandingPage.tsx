@@ -9,6 +9,8 @@ import { ButtonType } from "../utils/button";
 import PhotoCard from "../components/PhotoCard";
 import miniTubingImg from "../assets/Mini Tubing.png";
 import pasarRasaImg from "../assets/Pasar Rasa.jpg";
+import userImg from "../assets/User.png";
+import ReviewCard from "../components/ReviewCard";
 
 const LandingPage:React.FC  = () => {
 
@@ -136,6 +138,14 @@ const LandingPage:React.FC  = () => {
                         <PhotoCard path={miniTubingImg}><p>Outbond</p></PhotoCard>
                     </li>
                 </ul>
+            </section>
+            <section id="reviews" className="grid grid-cols-5 items-start p-10 gap-10">
+                <div className="col-span-2">
+                    <h1 className="font-bold text-4xl ">Testimoni</h1>
+                </div>
+                <div className="h-40 w-full col-span-3">
+                    <ReviewCard name="Wawan" path={userImg} job="Mahasiswa">welcome ! adventure loving people here , you can share your joyful experiences and memorable moments of your journeys to different destinations around the world</ReviewCard>
+                </div>
             </section>
         </div>
     );
