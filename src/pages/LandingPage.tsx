@@ -4,6 +4,8 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import Button from "../components/Button";
+import { ButtonType } from "../utils/button";
 
 const LandingPage:React.FC  = () => {
 
@@ -92,16 +94,32 @@ const LandingPage:React.FC  = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen></iframe>
             </section>
-            <section id="three-model" className="p-10 flex flex-col gap-10 w-full items-center">
+            <section id="about" className="p-10 flex flex-col gap-10 w-full items-center">
                 <h1 className="font-bold text-3xl text-center">Tentang Kami</h1>
                 <div className="grid grid-cols-2 gap-8">
                     <p className=" text-justify w-full">WIDAMAR merupakan proyek yang bertujuan untuk mentransformasi Desa Ajung menjadi destinasi ekowisata digital yang menarik. Proyek ini melibatkan pengembangan wisata interaktif di sekitar dua dam kembar yang ada di wilayah tersebut, dengan implementasi teknologi Augmented Reality (AR) untuk meningkatkan pengalaman wisatawan. Melalui pemanfaatan teknologi AR, pengunjung dapat berinteraksi dengan lingkungan sekitar, mendapatkan informasi tambahan, serta visualisasi digital yang memperkaya pengalaman mereka.</p>
                     <img src="src/assets/About.png" className="w-full" alt="" />
                 </div>
             </section>
-            {/* <section ref={mountRef} className="w-full overflow-hidden">
+            {/* <section id="three-model" ref={mountRef} className="w-full overflow-hidden">
             </section> */}
-
+            <section id="maps" className="p-10 flex flex-col gap-10 w-full items-center">
+                <h1 className="font-bold text-3xl text-center">Maps dan Peta Widamar</h1>
+                <div className="grid grid-cols-4 gap-8">
+                    <img src="src/assets/MAp Dummy.png" className="w-full col-span-3" alt="" />
+                    <div className="text-2xl flex items-center">
+                        <Button full={true} type={ButtonType.LINK} link="/ar">Halaman AR</Button>
+                    </div>
+                </div>
+                <div className="w-full flex gap-10 justify-center">
+                    <div className="w-96">
+                        <Button full={true} type={ButtonType.LINK} link="#">Tutorial Augmented Reality</Button>
+                    </div>
+                    <div className="w-96">
+                        <Button full={true} type={ButtonType.LINK} link="#">Lihat QR Augmented Reality</Button>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
