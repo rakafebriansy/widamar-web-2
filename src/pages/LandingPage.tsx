@@ -143,9 +143,46 @@ const LandingPage:React.FC  = () => {
                 <div className="col-span-2">
                     <h1 className="font-bold text-4xl ">Testimoni</h1>
                 </div>
-                <div className="h-40 w-full col-span-3">
+                <div className="h-80 w-full col-span-3">
                     <ReviewCard name="Wawan" path={userImg} job="Mahasiswa">welcome ! adventure loving people here , you can share your joyful experiences and memorable moments of your journeys to different destinations around the world</ReviewCard>
                 </div>
+            </section>
+            <section className="w-full flex justify-center mb-28">
+            <div className="w-[90%] lg:w-[80%] flex flex-col items-center relative gap-8 lg:gap-14">
+                <div className="absolute top-0 right-0 w-6 lg:w-16 bg-[#1F316F] rounded-full p-3">
+                    <svg className="w-full" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M39.5924 12.9909C40.3053 14.1883 40.2098 15.6141 39.342 16.7115L20.29 40.8187C19.5043 41.8128 18.2105 42.3196 16.8876 42.0734C15.5922 41.8318 14.565 40.9161 14.2085 39.6845L11.3895 29.9559L11.0959 28.944L10.3389 28.1915L3.05955 20.96C2.13784 20.0449 1.83361 18.7245 2.26558 17.5159C2.6931 16.3211 3.76537 15.4541 5.08738 15.2861L36.1442 11.3409C37.5582 11.1609 38.8794 11.7935 39.5924 12.9909Z" className="fill-white"/>
+                        <path d="M11.3891 29.9557L14.2081 39.6844C14.5646 40.9159 15.5917 41.8315 16.8872 42.0732C18.2102 42.3195 19.5039 41.8126 20.2896 40.8185L39.3416 16.7113C40.2094 15.6139 40.3049 14.1881 39.592 12.9907L11.0955 28.9438L11.3891 29.9557Z" className="fill-white"/>
+                        <path d="M22.693 22.452C22.9829 22.939 22.8113 23.5621 22.3085 23.8436L11.3904 29.9558L11.0968 28.9439L10.3398 28.1914L21.2579 22.0792C21.7607 21.7977 22.4031 21.9651 22.693 22.452Z" className="fill-[#1F316F]"/>
+                        <path d="M11.3886 29.9564L22.3066 23.8442C22.8094 23.5627 22.9811 22.9396 22.6912 22.4526L11.095 28.9445L11.3886 29.9564Z" className="fill-[#1F316F]"/>
+                    </svg>
+                </div>
+                <div className=" flex flex-col gap-4 lg:w-[60%] items-center text-center">
+                    <h1 className="font-bold text-2xl lg:text-4xl">Saran dan Kritik</h1>
+                    <p className="font-bold text-xs text-[#717171] lg:text-base">Yuk berikan kritik dan saran Atas tempat wisata ini agar  menjadi lebih baik lagi, jangan lupa berikan kritik dan saran yang membangun ya.</p>
+                </div>
+                <div className="flex flex-col gap-4 lg:gap-5 w-full">
+                    <div className="grid grid-cols-2 gap-4 lg:gap-8">
+                        <div className="bg-[#1F316F] p-1 rounded-md">
+                            <input type="text" name="" placeholder="Nama" id="" className="rounded-sm font-bold text-xs lg:text-lg w-full h-full p-3" />
+                        </div>
+                        <div className="bg-[#1F316F] p-1 rounded-md">
+                            <input type="text" name="" placeholder="Nomor Telepon" id="" className="rounded-sm font-bold text-xs lg:text-lg w-full h-full p-3" />
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 lg:gap-8 h-50">
+                        <div className="bg-[#1F316F] p-1 h-32 rounded-md">
+                            <textarea className="w-full h-full font-bold text-xs lg:text-lg resize-none p-2" placeholder="Sampaikan Kritik Anda*"></textarea>
+                        </div>
+                        <div className="bg-[#1F316F] p-1 h-32 rounded-md">
+                            <textarea className="w-full h-full font-bold text-xs lg:text-lg resize-none p-2" placeholder="Sampaikan Masukan Anda*"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-72">
+                <Button type={ButtonType.SUBMIT} full={true}>Submit</Button>
+                </div>
+            </div>
             </section>
         </div>
     );

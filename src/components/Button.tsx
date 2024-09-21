@@ -16,6 +16,12 @@ const Button: React.FC<ButtonProps> = ({ children, type, link, full = false }) =
                 <p>{children}</p>
             </Link>
         )
+    } else if(type == ButtonType.SUBMIT) {
+        return (
+            <button type="submit" className={`rounded-md bg-[#1F316F] font-semibold text-white flex items-center justify-center p-3 ${full && 'w-full'}`}>
+                <p>{children}</p>
+            </button>
+        )
     }
 }
 
