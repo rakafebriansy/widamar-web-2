@@ -6,6 +6,9 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import Button from "../components/Button";
 import { ButtonType } from "../utils/button";
+import PhotoCard from "../components/PhotoCard";
+import miniTubingImg from "../assets/Mini Tubing.png";
+import pasarRasaImg from "../assets/Pasar Rasa.jpg";
 
 const LandingPage:React.FC  = () => {
 
@@ -119,6 +122,20 @@ const LandingPage:React.FC  = () => {
                         <Button full={true} type={ButtonType.LINK} link="#">Lihat QR Augmented Reality</Button>
                     </div>
                 </div>
+            </section>
+            <section id="wisata" className="p-10 flex flex-col gap-10 w-full items-center">
+                <h1 className="font-bold text-3xl text-center">Maps dan Peta Widamar</h1>
+                <ul className="flex justify-around w-full">
+                    <li className="w-72 h-44 text-xl">
+                        <PhotoCard path={miniTubingImg}><p>Mini Tubing</p></PhotoCard>
+                    </li>
+                    <li className="w-72 h-44 text-xl">
+                        <PhotoCard path={pasarRasaImg}><p>Pasar Rasa</p></PhotoCard>
+                    </li>
+                    <li className="w-72 h-44 text-xl">
+                        <PhotoCard path={miniTubingImg}><p>Outbond</p></PhotoCard>
+                    </li>
+                </ul>
             </section>
         </div>
     );
