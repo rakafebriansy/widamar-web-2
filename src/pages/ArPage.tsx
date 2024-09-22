@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Phase from "../components/Phase";
+import QRImg from "../assets/QR.png";
+import hologramImg from "../assets/Hologram.png";
+import mobileAppImg from "../assets/Mobile App.png";
+import ARImg from "../assets/AR.png";
+import barcodePetaImg from "../assets/Barcode - Peta.png";
+import barcodeOutbondImg from "../assets/Barcode - Outbond.png";
+import barcodePasarRasaImg from "../assets/Barcode - Pasar Rasa.png";
 
 const ArPage: React.FC = () => {
 
@@ -13,7 +20,7 @@ const ArPage: React.FC = () => {
             <Navbar></Navbar>
             <section id="start" className="flex flex-col lg:grid lg:grid-cols-2 gap-8 h-screen p-10">
                 <div className="w-ful h-full flex justify-center items-center">
-                    <img src="src/assets/Hologram.png" className="w-[70%]" alt="" />
+                    <img src={hologramImg} className="w-[70%]" alt="" />
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-start">
                     <h3 className="text-4xl font-bold">Apa itu AR ?</h3>
@@ -40,13 +47,13 @@ const ArPage: React.FC = () => {
                     <div className="w-full flex justify-center border-r-2 border-[#7367BD]">
                         <div className="flex-col flex gap-20 px-4 w-[80%]">
                             <div className="h-24 lg:h-56 w-full flex justify-center items-center">
-                                <img className="h-[80%]" src="src/assets/QR.png" alt="" />
+                                <img className="h-[80%]" src={QRImg} alt="" />
                             </div>
                             <div className="h-24 lg:h-56 w-full flex justify-center items-center">
                                 <Phase order={2}>Tunggu hingga aplikasi berhasil terinstall.</Phase>
                             </div>
                             <div className="h-24 lg:h-56 w-full flex justify-center items-center">
-                                <img className="h-[80%]" src="src/assets/Mobile App.png" alt="" />
+                                <img className="h-[80%]" src={mobileAppImg} alt="" />
                             </div>
                             <div className="h-24 lg:h-56 w-full flex justify-center items-center">
                                 <Phase order={4}>Kemudian arahkan kamera anda menuju barcode di bawah.</Phase>
@@ -59,7 +66,7 @@ const ArPage: React.FC = () => {
                                 <Phase order={1}>Download Aplikasi smartphone android dengan scan barcode di samping.</Phase>
                             </div>
                             <div className="h-24 lg:h-56 w-full flex justify-center items-center">
-                                <img className="h-[80%]" src="src/assets/AR.png" alt="" />
+                                <img className="h-[80%]" src={ARImg} alt="" />
                             </div>
                             <div className="h-24 lg:h-56 w-full flex justify-center items-center">
                                 <Phase order={3}>Buka Aplikasi Widamar kemudian pilih fitur mulai scan.</Phase>
@@ -74,15 +81,15 @@ const ArPage: React.FC = () => {
                 <h1 className="font-bold text-3xl text-center">Barcode Augmented Reality</h1>
                 <ul className="flex flex-col gap-12 w-[80%]">
                     <li className="flex flex-col gap-4 w-full">
-                        <img src="src/assets/Barcode - Peta.png" className="w-full" alt="" />
+                        <img src={barcodePetaImg} className="w-full" alt="" />
                         <h2 className="text-xl text-center">Tampilan Peta Widamar</h2>
                     </li>
                     <li className="flex flex-col gap-4 w-full">
-                        <img src="src/assets/Barcode - Pasar Rasa.png" className="w-full" alt="" />
+                        <img src={barcodePasarRasaImg} className="w-full" alt="" />
                         <h2 className="text-xl text-center">Tampilan Pasar Rasa</h2>
                     </li>
                     <li className="flex flex-col gap-4 w-full">
-                        <img src="src/assets/Barcode - Outbond.png" className="w-full" alt="" />
+                        <img src={barcodeOutbondImg} className="w-full" alt="" />
                         <h2 className="text-xl text-center">Tampilan Outbond</h2>
                     </li>
                 </ul>

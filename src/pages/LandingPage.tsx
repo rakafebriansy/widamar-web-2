@@ -9,6 +9,8 @@ import { ButtonType } from "../utils/button";
 import PhotoCard from "../components/PhotoCard";
 import miniTubingImg from "../assets/Mini Tubing.png";
 import pasarRasaImg from "../assets/Pasar Rasa.jpg";
+import aboutImg from "../assets/About.png";
+import mapDummyImg from "../assets/Map Dummy.png";
 import userImg from "../assets/User.png";
 import ReviewCard from "../components/ReviewCard";
 import { useLocation } from "react-router-dom";
@@ -115,7 +117,7 @@ const LandingPage:React.FC  = () => {
                 <h1 className="font-bold text-2xl lg:text-3xl text-center">Tentang Kami</h1>
                 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8">
                     <p className="text-xs lg:text-base text-justify w-full">WIDAMAR merupakan proyek yang bertujuan untuk mentransformasi Desa Ajung menjadi destinasi ekowisata digital yang menarik. Proyek ini melibatkan pengembangan wisata interaktif di sekitar dua dam kembar yang ada di wilayah tersebut, dengan implementasi teknologi Augmented Reality (AR) untuk meningkatkan pengalaman wisatawan. Melalui pemanfaatan teknologi AR, pengunjung dapat berinteraksi dengan lingkungan sekitar, mendapatkan informasi tambahan, serta visualisasi digital yang memperkaya pengalaman mereka.</p>
-                    <img src="src/assets/About.png" className="w-full" alt="" />
+                    <img src={aboutImg} className="w-full" alt="" />
                 </div>
             </section>
             {/* <section id="three-model" ref={mountRef} className="w-full overflow-hidden">
@@ -123,7 +125,7 @@ const LandingPage:React.FC  = () => {
             <section id="maps" className="p-10 flex flex-col gap-6 lg:gap-10 w-full items-center">
                 <h1 className="font-bold text-2xl lg:text-3xl text-center">Maps dan Peta Widamar</h1>
                 <div className="flex flex-col lg:grid lg:grid-cols-4 gap-4 lg:gap-8">
-                    <img src="src/assets/MAp Dummy.png" className="w-full col-span-3" alt="" />
+                    <img src={mapDummyImg} className="w-full col-span-3" alt="" />
                     <div className="text-sm lg:text-2xl flex items-center">
                         <Button full={true} type={ButtonType.LINK} link="/ar">Halaman AR</Button>
                     </div>

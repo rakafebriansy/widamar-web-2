@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import logoImg from "../assets/Logo.png";
 
 const Navbar: React.FC = () => {
 
@@ -37,7 +38,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav ref={navRef} className="w-full bg-[#1F316F] py-3 px-9 flex items-center justify-between z-50 relative">
-            <img src="src/assets/Logo.png" className="h-8 lg:h-12" alt="" />
+            <img src={logoImg} className="h-8 lg:h-12" alt="" />
             <svg className="h-8 lg:hidden stroke-white" onClick={summonMenu} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Menu / Hamburger_LG">
             <path id="Vector" d="M3 17H21M3 12H21M3 7H21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
