@@ -65,6 +65,23 @@ const ArPage: React.FC = () => {
                 </div>
             </div>
         </section>
+        <section className="flex flex-col items-center gap-6 p-10">
+            <h1 className="font-bold text-3xl text-center">Barcode Augmented Reality</h1>
+            <ul className="flex flex-col gap-12 w-[80%]">
+                <li className="flex flex-col gap-4 w-full">
+                    <img src="src/assets/Barcode - Peta.png" className="w-full" alt="" />
+                    <h2 className="text-xl text-center">Tampilan Peta Widamar</h2>
+                </li>
+                <li className="flex flex-col gap-4 w-full">
+                    <img src="src/assets/Barcode - Pasar Rasa.png" className="w-full" alt="" />
+                    <h2 className="text-xl text-center">Tampilan Pasar Rasa</h2>
+                </li>
+                <li className="flex flex-col gap-4 w-full">
+                    <img src="src/assets/Barcode - Outbond.png" className="w-full" alt="" />
+                    <h2 className="text-xl text-center">Tampilan Outbond</h2>
+                </li>
+            </ul>
+        </section>
         </>
     );
 }
