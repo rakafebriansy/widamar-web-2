@@ -11,11 +11,23 @@ import miniTubingImg from "../assets/Mini Tubing.png";
 import pasarRasaImg from "../assets/Pasar Rasa.jpg";
 import userImg from "../assets/User.png";
 import ReviewCard from "../components/ReviewCard";
+import { useLocation } from "react-router-dom";
 
 const LandingPage:React.FC  = () => {
 
     const [isAnimated, setIsAnimated] = useState(false);
     const mountRef = useRef(null);
+
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.getElementById(location.hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [location]);
 
     useEffect(() => {
         if(!isAnimated) {
@@ -94,7 +106,7 @@ const LandingPage:React.FC  = () => {
         <div className="relative w-full min-h-screen">
             <Navbar></Navbar>
             <section id="profile-video" className="w-full h-screen">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/J2PqQI5Zyrc?autoplay=1" 
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/J2PqQI5Zyrc" 
                 title="YouTube video player" frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen></iframe>

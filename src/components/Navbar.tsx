@@ -7,19 +7,19 @@ const Navbar: React.FC = () => {
             <img src="src/assets/Logo.png" className="h-12" alt="" />
             <ul className="flex gap-5 font-semibold text-white items-center">
                 <li>
-                    <a href="#profile-video">Home</a>
+                    <Link to="/#profile-video">Home</Link>
                 </li>
                 <li>
-                    <a href="#about">About</a>
+                    <Link to="/#about">About</Link>
                 </li>
                 <li>
-                    <a href="#maps">Destination</a>
+                    <Link to="/#maps">Destination</Link>
                 </li>
                 <li>
-                    <a href="#wisata">Tours</a>
+                    <Link to="/#wisata">Tours</Link>
                 </li>
                 <li>
-                    <a href="#reviews">Reviews</a>
+                    <Link to="/#reviews">Reviews</Link>
                 </li>
                 <li>
                     <Link to="/ar">AR</Link>

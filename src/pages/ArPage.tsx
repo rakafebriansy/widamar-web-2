@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Phase from "../components/Phase";
 
 const ArPage: React.FC = () => {
+
+
+    useEffect(() => {
+        document.getElementById('start')!.scrollIntoView({ behavior: 'smooth' });
+    }, []);
     return (
         <>
         <Navbar></Navbar>
-        <section className="grid grid-cols-2 gap-8 h-screen p-10">
+        <section id="start" className="grid grid-cols-2 gap-8 h-screen p-10">
             <div className="w-ful h-full flex justify-center items-center">
                 <img src="src/assets/Hologram.png" className="w-[70%]" alt="" />
             </div>
